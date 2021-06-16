@@ -16,5 +16,40 @@ namespace Calculation
         {
             return $"{firstName} {secondName}";
         }
+
+        public int GetOrderByName(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentException("Name is Empty");
+            }
+            return 100;
+        } 
     }
+
+    public class LoyalEmployee : EmployeeName
+    {
+        public int Discount { set; get; }
+
+        public LoyalEmployee()
+        {
+            Discount = 10;
+        }
+    }
+
+    public static class EmployeeFactory
+    {
+        public static EmployeeName CreateEmployeeInstance(int numberOfOrder)
+        {
+            if (numberOfOrder <= 100)
+            {
+                return new EmployeeName();
+            }
+            else
+            {
+                return new LoyalEmployee();
+            }
+        }
+    }
+
 }
