@@ -11,7 +11,7 @@ namespace Calculation.Test
         public override IEnumerable<object[]> GetData(MethodInfo testMethod)
         {
             yield return new object[] { 1, true };
-            yield return new object[] { 200, false };
+          //  yield return new object[] { 3, false };
 
             //var readAllLines = System.IO.File.ReadAllLines("IsOddOrEvenTestData.txt");
             //return readAllLines.Select(x =>

@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Reflection.Emit;
-using PersonalPhotos.LegacyProject;
 using Xunit;
 
-namespace PersonalPhotos.Test.SproutMethod
+namespace Calculation
 {
     public class LegacyClassTest
     {
